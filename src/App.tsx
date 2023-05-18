@@ -10,6 +10,8 @@ import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
 import { User } from "./components/state/User";
 import { Counter } from "./components/state/Counter";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import { Box } from "./components/context/Box";
 
 export const App = () => {
   const personName = {
@@ -54,7 +56,10 @@ export const App = () => {
       /> */}
       {/* <LoggedIn />
       <User /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 };
